@@ -30,6 +30,7 @@ app.get("/produtos", async (req, res) => {
         res.status(500).send("Erro do servidor")
     }
     //PASSO 3: QUERY -> SELECT * FROM produtos
+    const [result, fields] = await conexao.query("SELECT * FROM produtos")
     //PASSO 4: Colocar os dados do banco de dados
     res.send({ mensagem: "Eu sou a rota de produtos" })
 })
