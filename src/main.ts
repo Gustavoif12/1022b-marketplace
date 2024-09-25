@@ -13,31 +13,29 @@ app.use(express.json())  //Middleware
 //incluir o CORS -> QUANDO A GENTE TEM OUTRA PORTA FAZENDO REQUISIÇÃO PARA A PORTA DO SERVIDOR
 app.use(cors())
 //ROTAS
-app.get("/produtos",async(req,res)=>{
+app.get("/produtos", async (req, res) => {
 
     //O que eu tenho que fazer aqui dentro?
     //OK -> PASSO 1: Criar o banco de dados
     //PASSO 2: Usar a lib mysql2 para conectar com o banco
-    try{
+    try {
         const conexao = await mysql.createConnection({
             host: "localhost",
-            user:"root",
-            password:"",
-            database:"banco1022b",
-            port:3306
+            user: "root",
+            password: "",
+            database: "banco1022b",
+            port: 3306
         })
         //PASSO 3: QUERY  -> SELECT * FROM produtos
-        const [result,fields]  = await conexao.query("SELECT * FROM produtos")
+        const [result, fields] = await conexao.query("SELECT * FROM produtos")
         //PASSO 4: Colocar os dados do banco no response
         res.send(result)
-    }catch(e){
+    } catch (e) {
         res.status(500).send("Erro do servidor")
     }
-    
-    
 })
 
 //INICIAR O SERVIDOR
-app.listen(8000,()=>{
+app.listen(8000, () => {
     console.log("SERVIDOR INICIADO NA PORTA 8000")
 })
