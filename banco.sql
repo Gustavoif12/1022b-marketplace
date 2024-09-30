@@ -1,7 +1,4 @@
-DROP DATABASE IF EXISTS banco1022b;
-CREATE DATABASE banco1022b;
-
-USE banco1022b;
+USE defaultdb;
 
 CREATE TABLE IF NOT EXISTS produtos(
 	id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -12,4 +9,4 @@ CREATE TABLE IF NOT EXISTS produtos(
 );
 
 INSERT INTO produtos VALUES
-(1, "Iphone", "Celular RUIM", 5000.50, "SEM IMAGEM");
+(1, 'Iphone', 'Celular RUIM', 5000.50, 'SEM IMAGEM');
