@@ -20,16 +20,36 @@ app.get("/produtos", async (req, res) => {
     //PASSO 2: Usar a lib mysql2 para conectar com o banco
     try {
         const conexao = await mysql.createConnection({
-            host: process.env.dbhost?process.env.dbhost:"localhost",
-            user:  process.env.dbuser?process.env.dbuser:"root",
-            password:  process.env.dbpassword?process.env.dbpassword:"",
-            database:  process.env.dbname?process.env.dbname:"banco1022b",
-            port:  process.env.dbport?parseInt(process.env.dbport):3306
+            host: process.env.dbhost ? process.env.dbhost : "localhost",
+            user: process.env.dbuser ? process.env.dbuser : "root",
+            password: process.env.dbpassword ? process.env.dbpassword : "",
+            database: process.env.dbname ? process.env.dbname : "banco1022b",
+            port: process.env.dbport ? parseInt(process.env.dbport) : 3306
         })
         //PASSO 3: QUERY  -> SELECT * FROM produtos
         const [result, fields] = await conexao.query("SELECT * FROM produtos")
         await conexao.end()
         //PASSO 4: Colocar os dados do banco no response
+        res.send(result)
+    } catch (e) {
+        res.status(500).send("Erro do servidor")
+    }
+})
+
+// ROTA PARA LISTAR USUÁRIOS
+app.get("/usuarios", async (req, res) => {
+    try {
+        const conexao = await mysql.createConnection({
+            host: process.env.dbhost ? process.env.dbhost : "localhost",
+            user: process.env.dbuser ? process.env.dbuser : "root",
+            password: process.env.dbpassword ? process.env.dbpassword : "",
+            database: process.env.dbname ? process.env.dbname : "banco1022b",
+            port: process.env.dbport ? parseInt(process.env.dbport) : 3306
+        })
+        // QUERY PARA LISTAR TODOS OS USUÁRIOS
+        const [result, fields] = await conexao.query("SELECT * FROM usuarios")
+        await conexao.end()
+        // ENVIAR OS DADOS COMO RESPOSTA
         res.send(result)
     } catch (e) {
         res.status(500).send("Erro do servidor")
