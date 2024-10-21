@@ -10,3 +10,20 @@ CREATE TABLE IF NOT EXISTS produtos(
 
 INSERT INTO produtos VALUES
 (1, 'Iphone', 'Celular RUIM', 5000.50, 'SEM IMAGEM');
+
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP
+);
+
+INSERT INTO usuarios VALUES
+('Vinicius Menezes', 'vinicius.menezes@estudante.ifms.edu.br', '2024-10-21 10:30:00', '2024-10-21 10:30:00');
+
+/*
+Criamos a tabela `usuarios` seguindo um modelo similar
+ao da tabela `produtos`, ajustando-a conforme as especificações
+solicitadas e inserindo uma tupla usando `INSERT INTO`.
+*/
