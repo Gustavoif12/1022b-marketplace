@@ -11,10 +11,10 @@ CREATE TABLE IF NOT EXISTS produtos(
 INSERT INTO produtos VALUES
 (1, 'Iphone', 'Celular RUIM', 5000.50, 'SEM IMAGEM');
 
-CREATE TABLE usuarios (
+CREATE TABLE IF NOT EXISTS usuarios(
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
+    nome VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
     created_at TIMESTAMP,
     updated_at TIMESTAMP
 );
