@@ -21,9 +21,3 @@ CREATE TABLE IF NOT EXISTS usuarios(
 
 INSERT INTO usuarios VALUES
 (1, 'Vinicius Menezes', 'vinicius.menezes@estudante.ifms.edu.br', '2024-10-21 10:30:00', '2024-10-21 10:30:00');
-
-/*
-Criamos a tabela `usuarios` seguindo um modelo similar
-ao da tabela `produtos`, ajustando-a conforme as especificações
-solicitadas e inserindo uma tupla usando `INSERT INTO`.
-*/
