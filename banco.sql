@@ -20,7 +20,7 @@ CREATE TABLE usuarios (
 );
 
 INSERT INTO usuarios VALUES
-('Vinicius Menezes', 'vinicius.menezes@estudante.ifms.edu.br', '2024-10-21 10:30:00', '2024-10-21 10:30:00');
+(1, 'Vinicius Menezes', 'vinicius.menezes@estudante.ifms.edu.br', '2024-10-21 10:30:00', '2024-10-21 10:30:00');
 
 /*
 Criamos a tabela `usuarios` seguindo um modelo similar
