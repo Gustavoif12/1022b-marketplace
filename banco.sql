@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS produtos(
 );
 
 INSERT INTO produtos VALUES
-(1, 'Iphone', 'Celular RUIM', 5000.50, 'SEM IMAGEM');
+(1, 'Iphone', 'Celular RUIM', 5000.50, 'SEM IMAGEM'),
+(2, 'Samsung', 'Celular BOM', 1900.50, 'SEM IMAGEM');
 
 CREATE TABLE IF NOT EXISTS usuarios(
     id INT PRIMARY KEY AUTO_INCREMENT,
