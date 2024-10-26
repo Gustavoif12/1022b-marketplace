@@ -20,4 +20,7 @@ CREATE TABLE IF NOT EXISTS usuarios(
 );
 
 INSERT INTO usuarios VALUES
-(1, 'Vinicius Menezes', 'vinicius.menezes@estudante.ifms.edu.br', '2024-10-21 10:30:00', '2024-10-21 10:30:00');
+(1, 'Guilherme Viana', 'guilherme.viana@gmail.com', '2024-10-21 10:30:00', '2024-10-21 10:30:00'),
+(2, 'Gustavo Silva', 'gustavo.silva@gmail.com', '2024-10-21 10:33:00', '2024-10-21 10:33:00'),
+(3, 'João Caetano', 'joao.caetano@gmail.com', '2024-10-21 10:37:00', '2024-10-21 10:37:00'),
+(4, 'Vinicius Menezes', 'vinicius.menezes@gmail.com', '2024-10-21 10:40:00', '2024-10-21 10:40:00');

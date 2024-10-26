@@ -14,7 +14,6 @@ app.use(express.json())  //Middleware
 app.use(cors())
 //ROTAS
 app.get("/produtos", async (req, res) => {
-
     //O que eu tenho que fazer aqui dentro?
     //OK -> PASSO 1: Criar o banco de dados
     //PASSO 2: Usar a lib mysql2 para conectar com o banco
