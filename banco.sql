@@ -1,4 +1,4 @@
-USE comicsdb;
+USE defaultdb;
 
 CREATE TABLE IF NOT EXISTS comics (
   id BIGINT PRIMARY KEY AUTO_INCREMENT,
