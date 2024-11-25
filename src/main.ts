@@ -67,7 +67,7 @@ app.post('/reservas', async (req, res) => {
         });
 
         const query = `
-        INSERT INTO reservas VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO reservas VALUES (?, ?, ?, ?, ?)
       `;
         const [result] = await conexao.query(query, [id, nome_comprador, titulo_comic, forma_pagamento, data_reserva]);
         await conexao.end();
