@@ -54,9 +54,9 @@ app.get('/comics', async (req, res) => {
 });
 
 // ROTA PARA CADASTRAR UMA COMIC
-app.post('/comics', async (req, res) => {
+app.post('/reservas', async (req, res) => {
     try {
-        const { id, titulo, autor, ano_de_publicacao, editora, sinopse, preco, imagem } = req.body;
+        const { id, nome_comprador, titulo_comic, forma_pagamento, data_reserva } = req.body;
 
         const conexao = await mysql.createConnection({
             host: process.env.dbhost ? process.env.dbhost : "localhost",
@@ -67,9 +67,9 @@ app.post('/comics', async (req, res) => {
         });
 
         const query = `
-        INSERT INTO comics VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO reservas VALUES (?, ?, ?, ?, ?, ?, ?, ?)
       `;
-        const [result] = await conexao.query(query, [id, titulo, autor, ano_de_publicacao, editora, sinopse, preco, imagem]);
+        const [result] = await conexao.query(query, [id, nome_comprador, titulo_comic, forma_pagamento, data_reserva]);
         await conexao.end();
 
         res.status(201).send({ message: 'Reserva feita com sucesso!' });
