@@ -16,11 +16,11 @@ CREATE TABLE IF NOT EXISTS reservas (
   nome_comprador VARCHAR(50),
   titulo_comic VARCHAR(50),
   forma_pagamento VARCHAR(50),
-  data_reserva TIMESTAMP
+  data_reserva DATE
 );
 
 INSERT INTO comics VALUES
 (1, 'Homem-Aranha: De Volta ao Lar', 'Stan Lee', 2017, 'Marvel Comics', 'Peter Parker enfrenta novos desafios ao retornar para Nova York.', 49.90, 'https://exemplo.com/imagem-homem-aranha.jpg');
 
 INSERT INTO reservas VALUES
-(1, 'Vinicius Menezes', 'Homem-Aranha: De Volta ao Lar', 'Cartão de crédito');
+(1, 'Vinicius Menezes', 'Homem-Aranha: De Volta ao Lar', 'Cartão de crédito', '2024-11-25');
