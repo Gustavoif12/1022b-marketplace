@@ -53,7 +53,7 @@ app.get('/comics', async (req, res) => {
     }
 });
 
-// ROTA PARA CADASTRAR UMA COMIC
+// ROTA PARA FAZER UMA RESERVA
 app.post('/reservas', async (req, res) => {
     try {
         const { id, nome_comprador, titulo_comic, forma_pagamento, data_reserva } = req.body;
@@ -73,6 +73,26 @@ app.post('/reservas', async (req, res) => {
         await conexao.end();
 
         res.status(201).send({ message: 'Reserva feita com sucesso!' });
+    } catch (e) {
+        console.error(e);
+        res.status(500).send('Erro do servidor');
+    }
+});
+
+// ROTA PARA LISTAR TODAS AS RESERVAS
+app.get('/reservas', async (req, res) => {
+    try {
+        const conexao = await mysql.createConnection({
+            host: process.env.dbhost ? process.env.dbhost : "localhost",
+            user: process.env.dbuser ? process.env.dbuser : "root",
+            password: process.env.dbpassword ? process.env.dbpassword : "",
+            database: process.env.dbname ? process.env.dbname : "comicsdb",
+            port: process.env.dbport ? parseInt(process.env.dbport) : 3306
+        });
+
+        const [result] = await conexao.query('SELECT * FROM reservas');
+        await conexao.end();
+        res.send(result);
     } catch (e) {
         console.error(e);
         res.status(500).send('Erro do servidor');
