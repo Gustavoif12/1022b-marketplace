@@ -16,7 +16,7 @@ app.post('/comics', async (req, res) => {
             host: process.env.dbhost ? process.env.dbhost : "localhost",
             user: process.env.dbuser ? process.env.dbuser : "root",
             password: process.env.dbpassword ? process.env.dbpassword : "",
-            database: process.env.dbname ? process.env.dbname : "comicsdb",
+            database: process.env.dbname ? process.env.dbname : "defaultdb",
             port: process.env.dbport ? parseInt(process.env.dbport) : 3306
         });
 
@@ -40,7 +40,7 @@ app.get('/comics', async (req, res) => {
             host: process.env.dbhost ? process.env.dbhost : "localhost",
             user: process.env.dbuser ? process.env.dbuser : "root",
             password: process.env.dbpassword ? process.env.dbpassword : "",
-            database: process.env.dbname ? process.env.dbname : "comicsdb",
+            database: process.env.dbname ? process.env.dbname : "defaultdb",
             port: process.env.dbport ? parseInt(process.env.dbport) : 3306
         });
 
@@ -62,7 +62,7 @@ app.post('/reservas', async (req, res) => {
             host: process.env.dbhost ? process.env.dbhost : "localhost",
             user: process.env.dbuser ? process.env.dbuser : "root",
             password: process.env.dbpassword ? process.env.dbpassword : "",
-            database: process.env.dbname ? process.env.dbname : "comicsdb",
+            database: process.env.dbname ? process.env.dbname : "defaultdb",
             port: process.env.dbport ? parseInt(process.env.dbport) : 3306
         });
 
@@ -86,7 +86,7 @@ app.get('/reservas', async (req, res) => {
             host: process.env.dbhost ? process.env.dbhost : "localhost",
             user: process.env.dbuser ? process.env.dbuser : "root",
             password: process.env.dbpassword ? process.env.dbpassword : "",
-            database: process.env.dbname ? process.env.dbname : "comicsdb",
+            database: process.env.dbname ? process.env.dbname : "defaultdb",
             port: process.env.dbport ? parseInt(process.env.dbport) : 3306
         });
 
