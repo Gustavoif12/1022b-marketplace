@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS reservas (
   nome_comprador VARCHAR(50),
   titulo_comic VARCHAR(50),
   forma_pagamento VARCHAR(50),
-  data_reserva DATE
+  data_reserva VARCHAR(50)
 );
 
 INSERT INTO comics VALUES
