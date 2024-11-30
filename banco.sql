@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS reservas (
 );
 
 INSERT INTO comics VALUES
-(1, 'Homem-Aranha: De Volta ao Lar', 'Stan Lee', 2017, 'Marvel Comics', 'Peter Parker enfrenta novos desafios ao retornar para Nova York.', 49.90, 'https://exemplo.com/imagem-homem-aranha.jpg');
+(1, 'Batman: Veneno', "Denny O'Neil, Russell Braun e Trevor Von Eeden", 2025, 'DC Comics', 'Depois que o Homem-Morcego fracassa ao tentar salvar uma jovem, ele acaba se tornando viciado na perigosa substância conhecida como Veneno, e sua vida inteira sai totalmente de controle!', 69.90, 'https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_5h18p4fuu55ajfbchqt49tjb3a/-S897-FWEBP');
 
 INSERT INTO reservas VALUES
-(1, 'Vinicius Menezes', 'Homem-Aranha: De Volta ao Lar', 'Cartão de crédito', '2024-11-25');
+(1, 'Gustavo Silva', 'Batman: Veneno', 'Cartão de crédito', '2024-11-25');
