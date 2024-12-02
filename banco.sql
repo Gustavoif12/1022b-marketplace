@@ -24,3 +24,4 @@ INSERT INTO comics VALUES
 
 INSERT INTO reservas VALUES
 (1, 'Gustavo Silva', 'Batman: Veneno', 'Cartão de crédito', '2024-11-25');
+ 
