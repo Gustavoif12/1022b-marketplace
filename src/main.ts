@@ -53,7 +53,7 @@ app.get('/comics', async (req, res) => {
     }
 });
 
-// ROTA PARA FAZER UMA RESERVA
+// ROTA PARA CADASTRAR UMA RESERVA
 app.post('/reservas', async (req, res) => {
     try {
         const { id, nome_comprador, titulo_comic, forma_pagamento, data_reserva } = req.body;
