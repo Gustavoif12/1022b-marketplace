@@ -10,7 +10,7 @@ Instalar as dependências
 Iniciar o back-end
 - No terminal, execute o comando npm run dev. Esse comando inicia o servidor em modo de desenvolvimento, permitindo atualizações automáticas quando o código for alterado.
 
-Iniciar o front-end
+<b>Iniciar o front-end<b/>
 - No terminal, execute o comando npm run dev.
 - Depois, abra o link http://localhost:5173/ no navegador para acessar a aplicação.
 
