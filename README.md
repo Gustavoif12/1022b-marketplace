@@ -21,7 +21,9 @@ Configurar o banco de dados
 - Depois de executar, confirme se os dados do banco estão aparecendo corretamente no seu navegador.
 
 
-Descrição do tema: O tema do trabalho é uma loja online de venda de quadrinhos, oferecendo histórias ilustradas de diversos autores e uma ampla variedade de temas.
+Descrição do tema:
+
+- O tema do trabalho é uma loja online de venda de quadrinhos, oferecendo histórias ilustradas de diversos autores e uma ampla variedade de temas.
 
 
 Descrição das funcionalidades:
